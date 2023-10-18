@@ -48,7 +48,7 @@ namespace SharpWeb.Utilities
                 {
                     Directory.CreateDirectory(directoryPath);
                 }
-                using (StreamWriter writer = new StreamWriter(fileName, false))
+                using (StreamWriter writer = new StreamWriter(fileName, false, Encoding.Default))
                 {
                     string[] header = data[0];
                     writer.WriteLine(string.Join(",", header));
